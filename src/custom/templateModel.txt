@@ -1,0 +1,22 @@
+import { Model } from "./model"
+
+
+export class {namespace} extends Model {
+
+    public id: number = 0
+    /**
+     * Escribe las propiedades de este model
+     * @params of {namespace}
+     */
+    // public name: string = ''
+
+    public _model: string = '{database}'
+
+    constructor(id?){
+        super()
+        if(id){
+            this.get({id: id}, data => this.setValue(data), error => console.log(error))
+        }
+    }
+}
+
